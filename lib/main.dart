@@ -16,25 +16,18 @@ OBS:
 atender ao Padrão de Arquitetura MVVM.*/
 
 import 'package:flutter/material.dart';
-import 'package:atv_casa_1/models/interrogatorio_models.dart';
 import 'package:atv_casa_1/views/interrogatorio_views.dart';
 import 'package:atv_casa_1/views_models/interrogatorio_views_models.dart';
+import 'package:provider/provider.dart';
 
 void main() {
-  runApp(const MainApp());
-}
-
-class MainApp extends StatelessWidget {
-  const MainApp({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return const MaterialApp(
-      home: Scaffold(
-        body: Center(
-          child: Text('Hello World!'),
-        ),
+  runApp(
+    ChangeNotifierProvider(
+      create: (context) => InterrogatorioViewsModels(),
+      child: MaterialApp(
+        home: InterrogatorioViews(),
+        debugShowCheckedModeBanner: false,
       ),
-    );
-  }
+    ),
+  );
 }
