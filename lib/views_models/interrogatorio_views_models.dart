@@ -16,49 +16,44 @@ class InterrogatorioViewsModels extends ChangeNotifier {
   void setResposta1(String resposta) {
     _resposta1 = resposta;
     notifyListeners();
-    print('r1\n');
   }
 
   void setResposta2(String resposta) {
     _resposta2 = resposta;
     notifyListeners();
-    print('r2\n');
   }
 
   void setResposta3(String resposta) {
     _resposta3 = resposta;
     notifyListeners();
-    print('r3\n');
   }
 
   void setResposta4(String resposta) {
     _resposta4 = resposta;
     notifyListeners();
-    print('r4\n');
   }
 
   void setResposta5(String resposta) {
     _resposta5 = resposta;
     notifyListeners();
-    print('r5\n');
+  }
 
-    void resultadoInterrogatorio() {
-      String resposta1 = _resposta1;
-      String resposta2 = _resposta2;
-      String resposta3 = _resposta3;
-      String resposta4 = _resposta4;
-      String resposta5 = _resposta5;
+  void resultadoInterrogatorio() {
+    String resposta1 = _resposta1;
+    String resposta2 = _resposta2;
+    String resposta3 = _resposta3;
+    String resposta4 = _resposta4;
+    String resposta5 = _resposta5;
 
-      final interrogatorioModels = InterrogatorioModels(
-        resposta1: resposta1,
-        resposta2: resposta2,
-        resposta3: resposta3,
-        resposta4: resposta4,
-        resposta5: resposta5,
-      );
-      _quantSim = interrogatorioModels.contaSim();
-      _classificacao = interrogatorioModels.resultadoClassificacao(_quantSim);
-      notifyListeners();
-    }
+    final interrogatorioModels = InterrogatorioModels(
+      resposta1: resposta1,
+      resposta2: resposta2,
+      resposta3: resposta3,
+      resposta4: resposta4,
+      resposta5: resposta5,
+    );
+    _quantSim = interrogatorioModels.contaSim();
+    _classificacao = interrogatorioModels.resultadoClassificacao(_quantSim);
+    notifyListeners();
   }
 }

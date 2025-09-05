@@ -65,10 +65,13 @@ class InterrogatorioViews extends StatelessWidget {
                 ),
 
                 // Botão Resultado
-                ElevatedButton(onPressed: () {}, child: Text('Resultado')),
+                ElevatedButton(
+                  onPressed: viewModel.resultadoInterrogatorio,
+                  child: Text('Resultado'),
+                ),
 
                 // Texto q mostra o resultado
-                Text('Resultado: '),
+                Text('Resultado: ${viewModel.classificacao}'),
               ],
             );
           },

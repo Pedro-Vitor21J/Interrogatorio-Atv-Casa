@@ -16,29 +16,26 @@ class InterrogatorioModels {
   });
 
   int contaSim() {
-    quantSim = 0;
-    if (resposta1 == 'sim' || resposta1 == 's') {
+    if (resposta1.toLowerCase() == 'sim' || resposta1.toLowerCase() == 's') {
       quantSim += 1;
     }
-    if (resposta2 == 'sim' || resposta2 == 's') {
+    if (resposta2.toLowerCase() == 'sim' || resposta2.toLowerCase() == 's') {
       quantSim += 1;
     }
-    if (resposta3 == 'sim' || resposta3 == 's') {
+    if (resposta3.toLowerCase() == 'sim' || resposta3.toLowerCase() == 's') {
       quantSim += 1;
     }
-    if (resposta4 == 'sim' || resposta4 == 's') {
+    if (resposta4.toLowerCase() == 'sim' || resposta4.toLowerCase() == 's') {
       quantSim += 1;
     }
-    if (resposta5 == 'sim' || resposta5 == 's') {
+    if (resposta5.toLowerCase() == 'sim' || resposta5.toLowerCase() == 's') {
       quantSim += 1;
     }
 
-    return quantSim = 0;
+    return quantSim;
   }
 
   String resultadoClassificacao(int quantSim) {
-    classificacao = '';
-
     if (quantSim <= 1) {
       classificacao = 'INOCENTE';
     }
